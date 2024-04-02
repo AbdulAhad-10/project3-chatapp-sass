@@ -1,0 +1,209 @@
+.dog-walker-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 30px;
+  padding: 10px;
+  width: 900px;
+}
+.dog-walker-container .dog-walker-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to right, rgb(233, 66, 255), rgb(136, 56, 255));
+  width: 100%;
+  padding: 10px 20px;
+  padding-top: 30px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 80px;
+  color: white;
+}
+.dog-walker-container .dog-walker-profile .dog-walker-profile-img {
+  border: 2px solid black;
+  border-radius: 20px;
+  height: 30px;
+  width: 30px;
+  margin-inline: 10px;
+}
+.dog-walker-container .dog-walker-profile .dog-walker-profile-text {
+  margin-right: 40px;
+}
+.dog-walker-container .dog-walker-profile .dog-walker-profile-text h2 {
+  font-size: 20px;
+  font-weight: 500;
+}
+.dog-walker-container .dog-walker-profile .dog-walker-profile-text p {
+  font-weight: 400;
+  font-size: 12px;
+}
+.dog-walker-container .dog-walker-chat {
+  background: rgb(245, 243, 247);
+  border-radius: 10px;
+}
+.dog-walker-container .dog-walker-chat .dog-walker-chat-left {
+  background: rgba(62, 39, 83, 0.2);
+  color: rgb(62, 39, 83);
+  max-width: 70%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.dog-walker-container .dog-walker-chat .dog-walker-chat-right {
+  background: white;
+  color: rgb(67, 33, 117);
+  max-width: 70%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+  margin-left: 100px;
+  justify-content: flex-end;
+}
+.dog-walker-container .dog-walker-chat ul {
+  list-style-type: none;
+  margin-left: 100px;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  gap: 10px;
+}
+.dog-walker-container .dog-walker-chat ul img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+.dog-walker-container .dog-walker-chat .dog-walker-chat-input {
+  padding: 10px;
+  background: white;
+  margin: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.dog-walker-container .dog-walker-chat .dog-walker-chat-input input {
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
+.dog-walker-container .dog-walker-chat .dog-walker-chat-input i {
+  background: indigo;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 50%;
+}
+.dog-walker-container .dog-walker-container-notch {
+  width: 140px;
+  height: 20px;
+  background: white;
+  position: absolute;
+  align-self: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.dog-walker-container .dog-walker-chat-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, rgb(233, 66, 255), rgb(136, 56, 255));
+  color: white;
+  max-width: 70%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+.dog-walker-container .dog-walker-chat-price div {
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.dog-walker-container .dog-walker-chat-price input {
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .dog-walker-container {
+    width: 90%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.app-container {
+  background: rgb(245, 243, 247);
+  height: 200vh;
+  padding: 80px 150px;
+}
+
+.app-bg-gradient {
+  background: linear-gradient(rgb(233, 66, 255), rgb(136, 56, 255));
+  width: 30%;
+  height: 90%;
+  position: absolute;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 150px;
+  top: 0;
+  left: -50px;
+  z-index: 1;
+}
+
+.app-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: absolute;
+  gap: 50px;
+}
+
+.app-text h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 40px;
+  color: rgb(62, 39, 83);
+}
+.app-text p {
+  color: rgb(163, 157, 170);
+  font-size: 20px;
+  line-height: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    height: auto;
+    padding: 0;
+  }
+  .app-content {
+    gap: 0;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    padding: 60px 20px;
+  }
+  .app-bg-gradient {
+    width: 50%;
+    left: -20px;
+  }
+  .app-text {
+    padding: 20px;
+    text-align: center;
+  }
+  .app-text h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .app-text p {
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=styles.css.map */

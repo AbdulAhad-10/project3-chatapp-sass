@@ -1,0 +1,132 @@
+@mixin chat($background, $txtColor) {
+  background: $background;
+  color: $txtColor;
+  max-width: 70%;
+  padding: 10px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.dog-walker-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 30px;
+  padding: 10px;
+  width: 900px;
+
+  .dog-walker-profile {
+    @include flex-center();
+
+    justify-content: flex-start;
+    background: linear-gradient(to right, $bg-gradient1, $bg-gradient2);
+    width: 100%;
+    padding: 10px 20px;
+    padding-top: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 80px;
+    color: white;
+
+    .dog-walker-profile-img {
+      border: 2px solid black;
+      border-radius: 20px;
+      height: 30px;
+      width: 30px;
+      margin-inline: 10px;
+    }
+
+    .dog-walker-profile-text {
+      margin-right: 40px;
+      h2 {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      p {
+        font-weight: 400;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .dog-walker-chat {
+    background: $app-bg;
+    border-radius: 10px;
+    .dog-walker-chat-left {
+      @include chat($leftChat-bg, $leftChat-txt);
+    }
+    .dog-walker-chat-right {
+      @include chat($rightChat-bg, $rightChat-txt);
+      margin-left: 100px;
+      justify-content: flex-end;
+    }
+    ul {
+      list-style-type: none;
+      margin-left: 100px;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 20px;
+      gap: 10px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+      }
+    }
+    .dog-walker-chat-input {
+      padding: 10px;
+      background: white;
+      margin: 10px;
+      border-radius: 20px;
+      @include flex-center();
+      justify-content: space-between;
+
+      input {
+        border: none;
+        padding-left: 10px;
+        outline: none;
+      }
+      i {
+        background: indigo;
+        color: white;
+        padding: 10px 12px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .dog-walker-container-notch {
+    width: 140px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    align-self: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .dog-walker-chat-price {
+    @include flex-center();
+    justify-content: space-between;
+    @include chat(
+      linear-gradient(to right, $bg-gradient1, $bg-gradient2),
+      white
+    );
+    div {
+      font-size: 12px;
+      @include flex-center();
+      gap: 5px;
+    }
+    input {
+      outline: none;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .dog-walker-container {
+    width: 90%;
+  }
+}

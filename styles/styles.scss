@@ -1,0 +1,92 @@
+$bg-gradient1: rgb(233, 66, 255);
+$bg-gradient2: rgb(136, 56, 255);
+$app-bg: rgb(245, 243, 247);
+$leftChat-txt: rgb(62, 39, 83);
+$leftChat-bg: rgba(62, 39, 83, 0.2);
+$rightChat-txt: rgb(67, 33, 117);
+$rightChat-bg: white;
+$main-heading: rgb(62, 39, 83);
+$paragraph: rgb(163, 157, 170);
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@import "mobile-container";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.app-container {
+  background: $app-bg;
+  height: 200vh;
+  padding: 80px 150px;
+}
+
+.app-bg-gradient {
+  background: linear-gradient($bg-gradient1, $bg-gradient2);
+  width: 30%;
+  height: 90%;
+  position: absolute;
+  border-bottom-right-radius: 200px;
+  border-bottom-left-radius: 150px;
+  top: 0;
+  left: -50px;
+  z-index: 1;
+}
+
+.app-content {
+  @include flex-center();
+  z-index: 2;
+  position: absolute;
+  gap: 50px;
+}
+
+.app-text {
+  h2 {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    color: $main-heading;
+  }
+  p {
+    color: $paragraph;
+    font-size: 20px;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    height: auto;
+    padding: 0;
+  }
+  .app-content {
+    gap: 0;
+    flex-wrap: wrap;
+    margin-inline: auto;
+    padding: 60px 20px;
+  }
+  .app-bg-gradient {
+    width: 50%;
+    left: -20px;
+  }
+
+  .app-text {
+    padding: 20px;
+    text-align: center;
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+}
